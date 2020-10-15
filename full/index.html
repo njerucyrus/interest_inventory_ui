@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+
+<!-- Basic Page Needs -->
+<meta charset="utf-8">
+<title>CAPYEI SURVEY</title>
+<meta name="description" content="">
+<meta name="author" content="CAPYEI">
+
+<!-- Favicons-->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" >
+<link href="css/socialize-bookmarks.css" rel="stylesheet">
+<link href="js/fancybox/source/jquery.fancybox.css?v=2.1.4" rel="stylesheet">
+<link href="check_radio/skins/square/aero.css" rel="stylesheet">
+
+<!-- Toggle Switch -->
+<link rel="stylesheet" href="css/jquery.switch.css">
+
+<!-- Owl Carousel Assets -->
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
+
+<!-- Google web font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Jquery -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.8.22.min.js"></script>
+
+<!-- Wizard-->
+<script src="js/jquery.wizard.js"></script>
+
+<!-- Radio and checkbox styles -->
+<script src="check_radio/jquery.icheck.js"></script>
+
+<!-- HTML5 and CSS3-in older browsers-->
+<script src="js/modernizr.custom.17475.js"></script>
+
+<!-- Support media queries for IE8 -->
+<script src="js/respond.min.js"></script>
+
+
+</head>
+
+<body>
+
+<section id="top-area">
+	<header>
+         <div class="container">
+            <div class="row">
+        	<div class="col-md-4 col-xs-3" id="logo"><a href="index.html">CAPYEI Survey</a></div>
+            
+            <div class="btn-responsive-menu"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </div>
+
+            <!-- <nav class="col-md-8 col-xs-9" id="top-nav">
+            	<ul>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">About</a></li>
+                    <li><a href="#" id="purchase">Purchase this template</a></li>
+               </ul>
+            </nav> --><!-- End Nav -->
+            
+         </div><!-- End row -->
+         </div><!-- End container -->
+        </header> <!-- End header -->
+        	
+            <div class="container">
+             <div class="row">
+                 <div class="col-md-12 main-title">
+                 <h1>CAPYEI SURVEY</h1>
+                <p>Ensure you fill all the questions</p>
+                </div>
+       		</div>
+            </div>
+ </section>   
+
+<section class="container" id="main">
+
+<!-- Start Survey container -->
+<div id="survey_container">
+
+	<div id="top-wizard">
+		<strong>Progress <span id="location"></span></strong>
+		<div id="progressbar"></div>
+		<div class="shadow"></div>
+	</div><!-- end top-wizard -->
+    
+	<form name="example-1" id="wrapped" action="survey_send_1.php" method="POST">
+		<div id="middle-wizard">
+			<div class="step">
+				<div class="row">
+					<h3 class="col-md-10">Enter your personal info</h3>
+					<div class="col-md-6">
+						<ul class="data-list">
+							<li><input type="text" name="fullname" class="required form-control" placeholder="Full Name"></li>
+							<li><input type="tel" name="phone" class="required form-control" placeholder="Phone Number"></li>
+							<li><input type="email" name="email" class="required form-control" placeholder="Your Email"></li>
+						</ul>
+					</div><!-- end col-md-6 -->
+                    
+					<div class="col-md-6">
+                    
+						<ul class="data-list">
+							<li>
+							<div class="styled-select">
+								<select class="form-control required" name="IDnumber">
+									<option value="" selected>Select your ID Number</option>
+									<option value="1011">1011</option>
+									<option value="2511">2511</option>
+									<option value="1654">1654</option>
+									<option value="98745">98745</option>
+								</select>
+							</div>
+							</li>
+						</ul>
+                        <ul class="data-list floated clearfix">
+							<li id="age"><input type="text" name="age" class="required form-control" placeholder="Age"></li>
+							<li><input name="gender" type="radio" class="required check_radio" value="Male"><label class="label_gender"> Male</label></li>
+							<li><input name="gender" type="radio" class="required check_radio" value="Female"><label class="label_gender"> Female</label></li>
+						</ul>
+                        
+					</div><!-- end col-md-6 -->
+				</div><!-- end row -->
+                
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4">
+						<ul class="data-list" id="terms">
+							<li>
+                            <strong>Do you accept <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a> ?</strong>
+                           <label class="switch-light switch-ios ">
+                                    <input type="checkbox" name="terms" class="required fix_ie8" value="yes">
+                                    <span>
+                                        <span class="ie8_hide">No</span>
+                                        <span>Yes</span>
+                                    </span>
+                                    <a></a>
+                                </label>
+							</li>
+						</ul>
+					</div>
+				</div>
+                
+			</div><!-- end step-->
+            
+			<div class="step row">
+				<h3 class="col-md-10">Section II: Answer each question with a “YES” or “NO” response</h3>
+				<div class="col-md-10">
+					<div class="mcq-box">
+						<h3>1. Do you like to take things apart and see how they work?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>2. Do you like to work on crafts?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate1" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate1" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>3. Do you like to help people with their problems?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate2" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate2" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>4. Do you like to do research?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate3" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate3" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>5. Are you interested in starting your own business?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate4" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate4" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>6. Do you like to collect or organize things?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate5" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate5" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>7. Do you like work that is intellectually challenging?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate6" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate6" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>8. Do you like to make decisions that affect others?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate7" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate7" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>9. Are you interested in improving conditions for others?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate8" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate8" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>10. Do you like to read or write stories, plays and poetry?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate9" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate9" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>11. Do you like to work with numbers?</h3>
+						<ul class="data-list-2">
+							<li><input name="rate10" type="radio" class="required check_radio" value="YES"><label>YES</label></li>
+							<li><input name="rate10" type="radio" class="required check_radio" value="NO"><label>NO</label></li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- end step -->
+            
+			<div class="step row">
+				<h3 class="col-md-10">Section III: Answer each question with a “TRUE” or “FALSE” response</h3>
+				<div class="col-md-10">
+					<div class="mcq-box">
+						<h3>1. Eight hens and four cats have a total of thirty-two legs.</h3>
+						<ul class="data-list-2">
+							<li><input name="rate11" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate11" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>2. Two of the following numbers add up to the number 17: 11, 3, 2, 14, 5</h3>
+						<ul class="data-list-2">
+							<li><input name="rate12" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate12" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>3. Raju is taller than Krishna. Shyam is shorter than Raju. Therefore, Krishna is the tallest</h3>
+						<ul class="data-list-2">
+							<li><input name="rate13" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate13" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>4. Krishna has Rs. 15, but he can buy a Rs. 30/- shirt if he borrows Rs. 6/- from Shyam and Rs. 8/- from Ravi.</h3>
+						<ul class="data-list-2">
+							<li><input name="rate14" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate14" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>5. 13 minutes past 5 O’ clock, is 47 minutes before 6 O’ clock</h3>
+						<ul class="data-list-2">
+							<li><input name="rate15" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate15" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>6. Santhi’s mother’s husbands son is Santhi’s brother</h3>
+						<ul class="data-list-2">
+							<li><input name="rate16" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate16" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>7. If you write the number 1 through 25 in a row, any two numbers that are next to each other add up to a number that is odd.</h3>
+						<ul class="data-list-2">
+							<li><input name="rate17" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate17" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>8. If Krishna looks into a mirror and touches his left ear, the image of Krishna touches its right ear.</h3>
+						<ul class="data-list-2">
+							<li><input name="rate18" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate18" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>9. If Tuesday is the second day of the month, then the very next Sunday is the sixth day of the month.</h3>
+						<ul class="data-list-2">
+							<li><input name="rate19" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate19" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+					<div class="mcq-box">
+						<h3>10. Mohan’s grandfather’s daughter could be Mohan’s son’s sister. </h3>
+						<ul class="data-list-2">
+							<li><input name="rate20" type="radio" class="required check_radio" value="TRUE"><label>TRUE</label></li>
+							<li><input name="rate20" type="radio" class="required check_radio" value="FALSE"><label>FALSE</label></li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- end step -->
+            
+			<div class="submit step" id="complete">
+                    	<i class="icon-check"></i>
+						<h3>Survey complete! Thank you for you time.</h3>
+						<button type="submit" name="process" class="submit">Submit the survey</button>
+			</div><!-- end submit step -->
+            
+		</div><!-- end middle-wizard -->
+        
+		<div id="bottom-wizard">
+			<button type="button" name="backward" class="backward">Backward</button>
+			<button type="button" name="forward" class="forward">Forward </button>
+		</div><!-- end bottom-wizard -->
+	</form>
+    
+</div><!-- end Survey container -->
+
+</section><!-- end section main container -->
+       
+<footer>
+	<section id="footer_2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+						<ul id="footer-nav">
+							<li>Copyright© CAPYEI </li>
+						</ul>              
+				</div>
+			</div>
+		</div>
+    </section>
+</footer> 
+ 
+ <div id="toTop">Back to Top</div>  
+
+<!-- OTHER JS --> 
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/jquery.tweet.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/quantity-bt.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/retina.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/functions.js"></script>
+
+<!-- FANCYBOX -->
+<script  src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4" type="text/javascript"></script> 
+<script src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5" type="text/javascript"></script> 
+<script src="js/fancy_func.js" type="text/javascript"></script> 
+
+</body>
+</html>

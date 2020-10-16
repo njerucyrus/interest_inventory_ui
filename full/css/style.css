@@ -1000,8 +1000,8 @@ body.start_test {
 }
 
 .start_test button {
-    height: 80px;
-    width: 100px;
+    height: 50px;
+    width: 150px;
     float: right;
     cursor: pointer;
     background: none;
@@ -1023,6 +1023,7 @@ body.start_test {
 .start_test button:hover {
     color: #f70090;
     transition: color 0.3s ease-in;
+    background: #fbfbfb;
 }
 
 .start_test .cta:hover .btn {

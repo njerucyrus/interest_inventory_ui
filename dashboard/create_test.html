@@ -38,7 +38,15 @@
     <link href="assets/lib/leaflet.markercluster/MarkerCluster.Default.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
 	<link href="assets/lib/flatpickr/flatpickr.min.css" rel="stylesheet">
-
+	<script type="text/javascript">
+		function valueChanged()
+		{
+			if($('.coupon_question').is(":checked"))   
+				$(".ques_number").hide();
+			else
+				$(".ques_number").show();
+		}
+	</script>
   </head>
 
 
@@ -121,9 +129,9 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="name">Include all questions&nbsp; <input type="checkbox" checked/></label>
+						<label for="name">Include all questions&nbsp; <input type="checkbox" class="coupon_question" checked onchange="valueChanged()"/></label>
 					</div>
-					<div class="form-row mb-3 d-none">
+					<div class="form-row mb-3 ques_number" style="display:none;">
 						<div class="col-md-3 col-sm-12">
 							<label for="name">Number of Questions</label>
 						</div>

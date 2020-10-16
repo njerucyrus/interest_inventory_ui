@@ -65,21 +65,16 @@
           <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
             <div class="navbar-vertical-content perfect-scrollbar scrollbar">
               <ul class="navbar-nav flex-column">
-                <li class="nav-item"><a class="nav-link dropdown-indicator" href="#home" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="home">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-chart-pie"></span></span><span class="nav-link-text">Home</span>
-                    </div>
-                  </a>
-                  <ul class="nav collapse show" id="home" data-parent="#navbarVerticalCollapse">
-                    <li class="nav-item"><a class="nav-link" href="dashboard-alt.html">Dashboard</a>
+                 <li class="nav-item"><a class="nav-link" href="dashboard-alt.html"><span class="nav-link-icon"><span class="fas fa-tachometer-alt"></span></span><span class="nav-link-text">&nbsp;&nbsp;Dashboard</span></a>
                     </li>
-					<li class="nav-item"><a class="nav-link" href="create_test.html">Create Test</a>
+					<li class="nav-item"><a class="nav-link" href="create_test.html"><span class="nav-link-icon"><span class="fas fa-file-alt"></span></span><span class="nav-link-text">&nbsp;&nbsp;Create Test</span></a>
                     </li>
-					<li class="nav-item"><a class="nav-link" href="active_list.html">List Active Test</a>
+					<li class="nav-item"><a class="nav-link" href="active_list.html"><span class="nav-link-icon"><span class="fas fa-list-ul"></span></span><span class="nav-link-text">&nbsp;&nbsp;List Active Test</span></a>
                     </li>
-					<li class="nav-item active"><a class="nav-link" href="view_test.html">View Test Results</a>
+					<li class="nav-item active"><a class="nav-link" href="view_test.html"><span class="nav-link-icon"><span class="far fa-check-circle"></span></span><span class="nav-link-text">&nbsp;&nbsp;View Test Results</span></a>
                     </li>
-                  </ul>
-                </li>
+					<li class="nav-item"><a class="nav-link" href="logout.html"><span class="nav-link-icon"><span class="fas fa-sign-out-alt"></span></span><span class="nav-link-text">&nbsp;&nbsp;Logout</span></a>
+                    </li>
               </ul>
               <div class="navbar-vertical-divider">
                 <hr class="navbar-vertical-hr my-2" />
@@ -98,13 +93,6 @@
               <div class="d-flex align-items-center"><img class="mr-2" src="assets/img/illustrations/falcon.png" alt="" width="40" /><span class="text-sans-serif">falcon</span>
               </div>
             </a>
-            <ul class="navbar-nav align-items-center d-none d-lg-block">
-              <li class="nav-item">
-                <form class="form-inline search-box">
-                  <input class="form-control rounded-pill search-input" type="search" placeholder="Search..." aria-label="Search" /><span class="position-absolute fas fa-search text-400 search-box-icon"></span>
-                </form>
-              </li>
-            </ul>
             <ul class="navbar-nav navbar-nav-icons ml-auto flex-row align-items-center">
               <li class="nav-item dropdown dropdown-on-hover"><a class="nav-link pr-0" id="navbarDropdownUser" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="avatar avatar-xl">
@@ -128,8 +116,8 @@
                 </div>
               </li>
             </ul>
-          </nav>          
-          <div class="card mb-3">
+          </nav> 
+		  <div class="card mb-3">
             <div class="card-header">
               <div class="row align-items-center justify-content-between">
                 <div class="col-6 col-sm-auto d-flex align-items-center pr-0">
@@ -148,43 +136,54 @@
                     </div>
                   </div>
                   <div id="dashboard-actions">
-					<div class="dropdown text-sans-serif">
-						<button class="btn btn-falcon-default rounded-capsule mr-1 mb-1" type="button">Export to CSV</button>
-						<button class="btn btn-falcon-default rounded-capsule mr-1 mb-1" type="button">Export to PDF</button>
-					</div>
+                    <button class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span><span class="d-none d-sm-inline-block ml-1">Export to CSV</span></button>
+					<button class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span><span class="d-none d-sm-inline-block ml-1">Export to PDF</span></button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="card-body px-0 pt-0">
-              <div class="table-responsive">
-			  <table class="table table-bordered mb-0 fs--1 w-100 view_result">
+              <div class="dashboard-data-table table-responsive">
+                <table class="table table-sm table-dashboard fs--1 data-table border-bottom" data-options='{"responsive":false,"pagingType":"simple","lengthChange":false,"searching":false,"pageLength":8,"columnDefs":[{"targets":[0,6],"orderable":false}],"language":{"info":"_START_ to _END_ Items of _TOTAL_ — <a href=\"#!\" class=\"font-weight-semi-bold\"> view all <span class=\"fas fa-angle-right\" data-fa-transform=\"down-1\"></span> </a>"},"buttons":["copy","excel"]}'>
                   <thead class="bg-200 text-900">
                     <tr>
+                      <th class="no-sort pr-1 align-middle data-table-row-bulk-select">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input checkbox-bulk-select" id="checkbox-bulk-purchases-select" type="checkbox" data-checkbox-body="#purchases" data-checkbox-actions="#purchases-actions" data-checkbox-replaced-element="#dashboard-actions" />
+                          <label class="custom-control-label" for="checkbox-bulk-purchases-select"></label>
+                        </div>
+                      </th>
                       <th class="sort pr-1 align-middle">Student Name</th>
                       <th class="sort pr-1 align-middle">Phone</th>
-					  <th class="sort pr-1 align-middle">Email</th>
-					  <th class="sort pr-1 align-middle">Gender</th>
-					  <th class="sort pr-1 align-middle text-center" colspan="7">Performance</th>
+                      <th class="sort pr-1 align-middle">Email</th>
+                      <th class="sort pr-1 align-middle">Gender</th>
+                      <th class="sort pr-1 align-middle text-center" colspan="7">Performance</th>
                     </tr>
 					<tr>
-						<th>&nbsp;</th>
-						<th>&nbsp;</th>
-						<th>&nbsp;</th>
-						<th>&nbsp;</th>
-						<th>Realistic</th>
-						<th>Artistic</th>
-						<th>Social</th>
-						<th>Investigative</th>
-						<th>Enterprising</th>
-						<th>Conventional</th>
-						<th>GENERAL INTELLIGENCE</th>
+						<th class="sort pr-1 align-middle">&nbsp;</th>
+						<th class="sort pr-1 align-middle">&nbsp;</th>
+						<th class="sort pr-1 align-middle">&nbsp;</th>
+						<th class="sort pr-1 align-middle">&nbsp;</th>
+						<th class="sort pr-1 align-middle">&nbsp;</th>
+						<th class="sort pr-1 align-middle">Realistic</th>
+						<th class="sort pr-1 align-middle">Artistic</th>
+						<th class="sort pr-1 align-middle">Social</th>
+						<th class="sort pr-1 align-middle">Investigative</th>
+						<th class="sort pr-1 align-middle">Enterprising</th>
+						<th class="sort pr-1 align-middle">Conventional</th>
+						<th class="sort pr-1 align-middle">GENERAL INTELLIGENCE</th>
 					</tr>
                   </thead>
                   <tbody id="purchases">
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle">Samuel M</td>
-					  <td class="align-middle">07012013</td>  
+                      <td class="align-middle">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input checkbox-bulk-select-target" type="checkbox" id="checkbox-0" />
+                          <label class="custom-control-label" for="checkbox-0"></label>
+                        </div>
+                      </td>
+                      <th class="align-middle"><a href="pages/customer-details.html">Samuel M</a></th>
+                      <td class="align-middle">07012013</td>  
 					  <td class="align-middle">test@gmail.com</td> 
 					  <td class="align-middle">M</td>
 					  <td class="align-middle">1006</td>  
@@ -194,7 +193,10 @@
 					  <td class="align-middle">1002</td> 
 					  <td class="align-middle">806</td> 
 					  <td class="align-middle">100%</td> 
+                      </td>
                     </tr>
+					  
+                    
                   </tbody>
                 </table>
               </div>

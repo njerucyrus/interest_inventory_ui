@@ -1042,5 +1042,44 @@ body.start_test {
     border-radius: 50%;
     opacity: 0.5;
 }
-
+@media (max-width: 767px) {
+	.start_test .circle-center {
+    height: 420px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #f70090;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+	}
+	.start_test .circle-center-text {
+		height: 420px;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		background-color: transparent;
+		border-radius: 50%;
+		opacity: 1;
+		color: #fff;
+		padding: 12% 10%;
+		box-sizing: border-box;
+		transform: translate(-50%, -50%);
+		left: 50%;
+	}
+	.start_test .circle-green {
+		height: 250px;
+		width: 250px;
+		position: absolute;
+		bottom: -18px;
+		left: 150px;
+		background-color: #3bb508;
+		border-radius: 50%;
+		opacity: 0.5;
+	}
+	.start_test .container {
+		width: 100%;
+	}
+}
 

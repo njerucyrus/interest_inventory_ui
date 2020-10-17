@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Test Result PDF | CAPYEI Dashboard</title>
+	<style>
+		.clearfix:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		a {
+		  color: #5D6975;
+		  text-decoration: underline;
+		}
+
+		body {
+		  position: relative;
+		  width: 21cm;  
+		  height: 29.7cm; 
+		  margin: 0 auto; 
+		  color: #001028;
+		  background: #FFFFFF; 
+		  font-family: Arial, sans-serif; 
+		  font-size: 12px; 
+		  font-family: Arial;
+		}
+
+		header {
+		  padding: 10px 0;
+		  margin-bottom: 30px;
+		}
+
+		#logo {
+		  text-align: center;
+		  margin-bottom: 10px;
+		}
+
+		h1 {
+		  border-top: 1px solid  #5D6975;
+		  border-bottom: 1px solid  #5D6975;
+		  color: #5D6975;
+		  font-size: 2.4em;
+		  line-height: 1.4em;
+		  font-weight: normal;
+		  text-align: center;
+		  margin: 0 0 20px 0;
+		  background: url(dimension.png);
+		}
+
+		#project {
+		  float: left;
+		}
+
+		#project span {
+		  color: #5D6975;
+		  text-align: right;
+		  width: 52px;
+		  margin-right: 10px;
+		  display: inline-block;
+		  font-size: 0.8em;
+		}
+
+		#company {
+		  float: right;
+		  text-align: right;
+		}
+
+		#project div,
+		#company div {
+		  white-space: nowrap;        
+		}
+		.interest_list li {
+			list-style: none;
+			font-size: 25px;
+			padding-bottom: 15px;
+		}
+		table {
+		  width: 100%;
+		  border-collapse: collapse;
+		  border-spacing: 0;
+		  margin-bottom: 20px;
+		  border: 1px solid #dddddd;
+		}
+
+		table tr:nth-child(2n-1) td {
+		  background: #F5F5F5;
+		}
+
+		table th,
+		table td {
+		  text-align: center;
+		}
+
+		table th {
+		  padding: 5px 20px;
+		  color: #5D6975;
+		  border-bottom: 1px solid #C1CED9;
+		  white-space: nowrap;        
+		  font-size: 15px;
+    	  font-weight: bold;
+		}
+
+		table .service,
+		table .desc {
+		  text-align: left;
+		}
+
+		table td {
+		  padding: 20px;
+		  text-align: center;
+		  font-size: 13px;
+		}
+
+		table td.service,
+		table td.desc {
+		  vertical-align: top;
+		}
+
+		table td.unit,
+		table td.qty,
+		table td.total {
+		  font-size: 1.2em;
+		}
+
+		table td.grand {
+		  border-top: 1px solid #5D6975;;
+		}
+
+		#notices .notice {
+		  color: #5D6975;
+		  font-size: 1.2em;
+		}
+
+		footer {
+		  color: #5D6975;
+		  width: 100%;
+		  height: 30px;
+		  position: absolute;
+		  bottom: 0;
+		  border-top: 1px solid #C1CED9;
+		  padding: 8px 0;
+		  text-align: center;
+		}
+	</style>
+  </head>
+
+
+  <body>
+	<!-- ===============================================-->
+    <!--    Header Content-->
+    <!-- ===============================================-->
+	<header class="clearfix">
+      <div id="logo">
+        <img src="capyei-logo.png">
+      </div>
+    </header>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+		<div class="container" data-layout="container">
+			<div class="interest_box">
+				<ul class="interest_list">
+					<li><strong>Interest :</strong> Inventory Test</li>
+					<li><strong>Serial No. :</strong> 2020 Test</li>
+					<li><strong>Total Participants:</strong> 500</li>
+					<li><strong>Males:</strong> 300</li>
+					<li><strong>Females:</strong> 200</li>
+				</ul>
+			</div>
+			<table>
+				<thead>
+				  <tr style="height: 40px;">
+					<th class="name">Name</th>
+					<th class="phone">Phone</th>
+					<th>Gender</th>
+					<th colspan="3">Score</th>
+				  </tr>
+				  <tr>
+					<th class="sort pr-1 align-middle">&nbsp;</th>
+					<th class="sort pr-1 align-middle">&nbsp;</th>
+					<th class="sort pr-1 align-middle">&nbsp;</th>
+					<th class="sort pr-1 align-middle">Realistic</th>
+					<th class="sort pr-1 align-middle">Artistic</th>
+					<th class="sort pr-1 align-middle">Social</th>
+					</tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>Samuel</td>
+					<td>9874563210</td>
+					<td>M</td>
+					<td>1006</td>
+					<td>956</td>
+					<td>954</td>
+				  </tr>
+				  <tr>
+					<td>Samuel</td>
+					<td>9874563210</td>
+					<td>M</td>
+					<td>1006</td>
+					<td>956</td>
+					<td>954</td>
+				  </tr>
+				  <tr>
+					<td>Samuel</td>
+					<td>9874563210</td>
+					<td>M</td>
+					<td>1006</td>
+					<td>956</td>
+					<td>954</td>
+				  </tr>
+				</tbody>
+			  </table>
+		</div>
+	<main>
+  </body>
+
+</html>
